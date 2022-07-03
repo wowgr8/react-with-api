@@ -52,4 +52,18 @@ describe('headlinesReducer', () => {
         error: null
     });
   });
+
+  test('failing to get headlines should change isLoading to false and add an error message', () => {
+    const error = "An error";
+    action = {
+      type: c.GET_HEADLINES_FAILURE,
+      error
+    };
+
+    expect(headlinesReducer(loadingState, action)).toEqual({
+        isLoading: false,
+        headlines: [],
+        error: "An error"
+    });
+  });
 });
