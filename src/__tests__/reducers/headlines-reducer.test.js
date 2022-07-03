@@ -1,6 +1,9 @@
 import headlinesReducer from '../../reducers/headlines-reducer';
+import * as c from './../../actions/ActionTypes';
 
 describe('headlinesReducer', () => {
+
+  let action;
 
   const defaultState = {
     isLoading: false,
@@ -16,5 +19,17 @@ describe('headlinesReducer', () => {
         error: null
       }
     );
+  });
+
+  test('requesting headlines should successfully change isLoading from false to true', () => {
+    action = {
+      type: c.REQUEST_HEADLINES
+    };
+
+    expect(headlinesReducer(defaultState, action)).toEqual({
+        isLoading: true,
+        headlines: [],
+        error: null
+    });
   });
 });
