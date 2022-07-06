@@ -14,23 +14,25 @@ class Headlines extends React.Component {
     this.makeApiCall()
   }
 
-  makeApiCall = () => {
-    fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
-      .then(response => response.json())
-      .then(
-        (jsonifiedResponse) => {
-          this.setState({
-            isLoaded: true,
-            headlines: jsonifiedResponse.results
-          });
-        })
-        .catch((error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        });
-  }
+  // Note: This method we previously wrote to update local state will be updated to dispatch actions with redux thunk. It will be moved into actions/index.js
+
+  // makeApiCall = () => {
+  //   fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
+  //     .then(response => response.json())
+  //     .then(
+  //       (jsonifiedResponse) => {
+  //         this.setState({
+  //           isLoaded: true,
+  //           headlines: jsonifiedResponse.results
+  //         });
+  //       })
+  //       .catch((error) => {
+  //         this.setState({
+  //           isLoaded: true,
+  //           error
+  //         });
+  //       });
+  // }
 
   render() {
     const { error, isLoaded, headlines } = this.state;
