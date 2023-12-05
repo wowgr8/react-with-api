@@ -17,6 +17,8 @@
   margin-bottom: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .headline-card h3 {
