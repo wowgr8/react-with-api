@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { makeApiCall } from '../actions/index';
+import '../styles/Headlines.css';
 
 class Headlines extends React.Component {
   constructor(props) {
@@ -22,9 +23,9 @@ class Headlines extends React.Component {
       return (
         <React.Fragment>
           <h1>Headlines</h1>
-          <ul>
+          <ul className="headline-list">
             {headlines.map((headline, index) =>
-              <li key={index}>
+              <li key={index} className="headline-card">
                 <h3>{headline.title}</h3>
                 <p>{headline.abstract}</p>
               </li>
