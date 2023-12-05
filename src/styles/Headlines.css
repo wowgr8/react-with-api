@@ -1,0 +1,27 @@
+.headline-list {
+  list-style: none;
+  padding: 0;
+  background-color: #f2f2f2; 
+}
+
+.headline-card {
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.headline-card h3 {
+  margin-top: 0;
+  color: #3498db; 
+}
+
+.headline-card p {
+  color: #555;
+}
+
+h1 {
+  color: #3498db;
+}
