@@ -22,7 +22,7 @@ class Headlines extends React.Component {
     } else {
       return (
         <React.Fragment>
-          <h1>Headlines</h1>
+          <h1 className="headline-title">Headlines</h1>
           <ul className="headline-list">
             {headlines.map((headline, index) =>
               <li key={index} className="headline-card">
