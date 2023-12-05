@@ -3,6 +3,11 @@
   padding: 0;
   background-color: #f2f2f2; 
 }
+.headline-title {
+  background-color: #f2f2f2;
+  padding: 16px;
+  color: #3498db;
+}
 
 .headline-card {
   border: 1px solid #3498db;
